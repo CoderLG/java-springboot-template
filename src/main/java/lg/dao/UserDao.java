@@ -55,7 +55,7 @@ public interface UserDao extends JpaRepository<TUser, Integer>{
 
 
     /**
-     * 多字段查询
+     * 多字段模糊查询
      * 多字段排序
      *
      * @param name
