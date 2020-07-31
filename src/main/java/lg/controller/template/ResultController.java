@@ -51,9 +51,6 @@ public class ResultController {
     @GetMapping("getResponseEntity")
     @ResponseBody
     public ResponseEntity<ResultEntityVo> getResponseEntity(){
-        Map<String, Object> returnError = new HashMap();
-        returnError.put("code", "200");
-        returnError.put("mes", "mess");
         ResultEntityVo result = new ResultEntityVo();
         result.setCode("200");
         result.setMessage("true");

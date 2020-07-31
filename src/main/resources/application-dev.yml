@@ -1,10 +1,15 @@
 
+server:
+  port: 18081
 
 spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
 
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://192.168.4.38:5431/gang
+    url: jdbc:postgresql://192.168.4.85:5431/gang
     username: postgres
     password: postgres
 
@@ -23,12 +28,17 @@ spring:
       show-sql: true
 
 
-  rabbitmq:
-    addresses: 192.168.4.78
-    port: 15672
-    username: guest
-    password: guest
+#  rabbitmq:
+#    addresses: 192.168.4.78
+#    port: 15672
+#    username: guest
+#    password: guest
 
 
+#  rabbitmq:
+#    host: ${rabbitmq_host}
+#    port: ${rabbitmq_port}
+#    username: ${rabbitmq_username}
+#    password: ${rabbitmq_password}
 
 

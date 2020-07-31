@@ -43,17 +43,17 @@ public class UserServiceImpl {
         userDao.updateSomeThing(name,userid);
     }
 
-    public void deleteOne(int id){
+    public void deleteOne(Long id){
         userDao.deleteById(id);
     }
 
-    public void deleteOne2(int id){
+    public void deleteOne2(Long id){
         userDao.deleteById(id);
         int aa = 1/0;
     }
 
     @Transactional
-    public void deleteOne3(int id){
+    public void deleteOne3(Long id){
         userDao.deleteById(id);
         int aa = 1/0;
     }

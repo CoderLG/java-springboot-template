@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 @Repository
-public interface UserDao extends JpaRepository<TUser, Integer>{
+public interface UserDao extends JpaRepository<TUser, Long>{
 
 
     /**
@@ -63,7 +63,7 @@ public interface UserDao extends JpaRepository<TUser, Integer>{
      * @param pageable
      * @return
      */
-    Page<UserResp> findByNameLikeAndGridSetLikeOrderByUserIdDescNameAsc(String name, String set, Pageable pageable);
+    Page<UserResp> findByNameLikeAndGridSetLikeOrderByIdDescNameAsc(String name, String set, Pageable pageable);
 
 
 

@@ -1,5 +1,4 @@
-server:
-  port: 8080
+
 
 spring:
   application:
@@ -23,24 +22,8 @@ swagger:
 
 number: 2
 
-#url: devUrl
-#name: lg
-#Dbname: jdbc:mysql://127.0.0.1:3306/test
-#
-#
-#feign:
-#  dmId: dm
-#  gspId: geoserverplus
-#  gspurl: ~
-#  hystrix:
-#    enabled: true #feign开启hystrix支持
-#hystrix:
-#  command:
-#    default:
-#      execution:
-#        isolation:
-#          thread:
-#            timeoutInMilliseconds: 20000
+
+
 #ribbon:
 #  ReadTimeout: 15000
 #  ConnectTimeout: 15000

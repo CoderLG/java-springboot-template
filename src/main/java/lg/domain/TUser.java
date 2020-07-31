@@ -10,13 +10,7 @@ import java.util.*;
 @Data
 @Entity
 @Table(name="t_user")
-public class TUser {
-
-	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	//数据库中的对应字段 user_id
-	private Integer userId;
-
+public class TUser extends  BaseEntity {
 
 	private Integer age;
 	private String name;
@@ -39,8 +33,8 @@ public class TUser {
         for (Map<String, Object> user : users) {
             TUser tUser = new TUser();
 
-            if(keys.contains("user_id"))
-                tUser.setUserId(Integer.valueOf(user.get("user_id").toString()));
+            if(keys.contains("id"))
+                tUser.setId(Long.valueOf(user.get("id").toString()));
 
             if(keys.contains("age"))
                 tUser.setAge(Integer.valueOf(user.get("age").toString()));
