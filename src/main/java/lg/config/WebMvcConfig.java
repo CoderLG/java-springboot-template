@@ -11,7 +11,9 @@ public class WebMvcConfig {
 
     /**
      * 全局解决跨域问题
-     * @return
+     *
+     * 也可以在controller上增加 @CrossOrigin
+     *
      */
     @Bean
     public WebMvcConfigurer corsConfigurer() {

@@ -1,4 +1,4 @@
-package lg.controller.template;
+package lg.controller;
 
 
 import io.swagger.annotations.Api;

@@ -1,24 +1,59 @@
-package lg.controller.template;
+package lg.controller;
 
-import lg.dao.UserDao;
+import io.swagger.annotations.Api;
+import lg.dao.DaoCenter;
+import lg.dao.impl.UserDao;
 import lg.domain.TUser;
+import lg.dto.req.UserVo;
 import lg.utils.TimeUtils;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.Random;
 
+@Api(tags = "实体操作")
+@Slf4j
 @RestController
 public class UserController {
 
     @Autowired
     UserDao userDao;
 
+    @Autowired
+    DaoCenter daoCenter;
+
+    //============================创建数据库============================
+    @PostMapping("createTable")
+    @Transactional
+    public void createTable(){
+        try {
+            String createSql = "CREATE TABLE \"public\".\"" + new Random().nextInt(10) + "_data_info\"(\"id\" SERIAL primary key,\"create_time\" timestamp(6),\"update_time\" timestamp(6));";
+            log.info("创建数据库 " + createSql);
+            daoCenter.getEntityManager().createNativeQuery(createSql).executeUpdate();
+        } catch (Exception e) {
+            log.error("创建数据库出错",e);
+        }
+    }
+    //============================创建数据库============================
+
+
+
+    //============================入参校验============================
+    @PostMapping("verifyParams")
+    public void verifyParams(@RequestBody  @Validated UserVo userVo){
+        log.info(userVo.getUserName());
+    }
+    //============================入参校验============================
+
+
+
+    //============================时间============================
     /**
      * 查看创建时间和修改时间 是否生成
      */
@@ -63,6 +98,7 @@ public class UserController {
        TimeUtils.showTimeZone();
     }
 
+    //============================时间============================
 
 
 

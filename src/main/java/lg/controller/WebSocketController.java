@@ -1,4 +1,4 @@
-package lg.controller.template;
+package lg.controller;
 
 import cn.hutool.core.util.StrUtil;
 import lg.websocket_ws.WebSocketMessageHandler;

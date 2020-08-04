@@ -1,5 +1,6 @@
-package lg.dao;
+package lg.dao.impl;
 
+import lg.dao.DaoBase;
 import lg.domain.TUser;
 import lg.domain.UserResp;
 import org.springframework.data.domain.Page;
@@ -16,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 @Repository
-public interface UserDao extends JpaRepository<TUser, Long>{
+public interface UserDao extends DaoBase<TUser,Long> {
 
 
     /**

@@ -1,6 +1,6 @@
 
 server:
-  port: 18081
+  port: 8080
 
 spring:
   jackson:
@@ -12,6 +12,9 @@ spring:
     url: jdbc:postgresql://192.168.4.85:5431/gang
     username: postgres
     password: postgres
+
+    data: classpath*:init.sql
+    initialization-mode: always
 
   jpa:
       hibernate:
