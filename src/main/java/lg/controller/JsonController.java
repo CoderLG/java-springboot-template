@@ -49,7 +49,7 @@ public class JsonController {
 
         Teacher teacher = new Teacher();
         //dozerBeanMapper.map(student,teacher);
-        Teacher map = dozerBeanMapper.map(student, Teacher.class);
+        Teacher map = DozerUtils.map(student, Teacher.class);
         return map;
     }
 
