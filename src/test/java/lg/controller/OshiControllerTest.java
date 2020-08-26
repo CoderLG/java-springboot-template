@@ -10,6 +10,7 @@ import oshi.software.os.OperatingSystem;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Random;
 
 import static org.junit.Assert.*;
 
@@ -42,15 +43,17 @@ public class OshiControllerTest {
 
     @Test
     public void t (){
-        ArrayList<String> strings = new ArrayList<>();
-        strings.add("b");
-        strings.add("a.a");
-//        if(strings.contains("."))
-//            System.out.println("suss");
 
-        for (String s : strings)
-            if(s.contains("."))
-                 System.out.println("suss");
+        String extList = "sdf";
+        String[] split = extList.split(";");
+        String resStr = "";
+        for (String s : split) {
+            resStr = resStr + "." + s + ",";
+
+        }
+        System.out.println(resStr.substring(0,resStr.length()-1));
+
+
     }
 
     @Test

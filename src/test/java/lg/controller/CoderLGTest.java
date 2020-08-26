@@ -7,22 +7,31 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Random;
 
 /**
  * author: LG
  * date: 2020-06-18 10:09
  * desc:
  */
-@SpringBootTest
-@RunWith(SpringRunner.class)
-@Slf4j
+//@SpringBootTest
+//@RunWith(SpringRunner.class)
+//@Slf4j
 public class CoderLGTest {
 
 
     @Test
     public void test3(){
-        Exception exception = new Exception();
-        log.error("mes{}", exception.getMessage(),exception);
+
+        List<String> strings = new ArrayList<>();
+        strings.add("a");
+        strings.set(0, "ss");
+        System.out.println(strings.get(0));
+//        System.out.println(strings.get(0));
+
     }
 
 

@@ -2,6 +2,11 @@
 server:
   port: 8080
 
+
+logging:
+  level:
+    root: warn
+
 spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
@@ -29,6 +34,21 @@ spring:
           temp:
             use_jdbc_metadata_defaults: false
       show-sql: true
+
+swagger:
+  enabled: true
+  title: 开发文档
+  version: ${spring.application.version}
+  description: 开发文档
+  exclude-path: /error,/actuator/**
+  contact:
+    name: CoderLG
+    email: im.lg@qq.com
+  authorization:
+    name: 认证头
+    key-name: Authorization
+
+number: 2
 
 
 #  rabbitmq:
