@@ -16,7 +16,7 @@ import javax.persistence.Query;
  */
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class TestControllerTest {
+public class SpringBootTestFun {
 
     @Autowired
     EntityManager entityManager;
