@@ -1,7 +1,7 @@
 package lg.dao;
 
+import lg.dao.impl.UserDao;
 import lg.domain.TUser;
-import lombok.var;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

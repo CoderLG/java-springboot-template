@@ -1,15 +1,12 @@
 package lg.service.impl;
 
-import lg.dao.UserDao;
+import lg.dao.impl.UserDao;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
 import javax.transaction.Transactional;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * author: LG
@@ -43,17 +40,17 @@ public class UserServiceImpl {
         userDao.updateSomeThing(name,userid);
     }
 
-    public void deleteOne(int id){
+    public void deleteOne(Long id){
         userDao.deleteById(id);
     }
 
-    public void deleteOne2(int id){
+    public void deleteOne2(Long id){
         userDao.deleteById(id);
         int aa = 1/0;
     }
 
     @Transactional
-    public void deleteOne3(int id){
+    public void deleteOne3(Long id){
         userDao.deleteById(id);
         int aa = 1/0;
     }

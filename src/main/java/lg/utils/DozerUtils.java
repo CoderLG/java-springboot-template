@@ -16,7 +16,14 @@ import java.util.List;
  * 实体间 相同属性的赋值
  */
 public class DozerUtils {
-      public static DozerBeanMapper dozerBeanMapper = new DozerBeanMapper();
+
+    public static DozerBeanMapper dozerBeanMapper = new DozerBeanMapper();
+
+    public static  <T> T map(Object source,Class<T> destinationClass){
+        T destinationObj = dozerBeanMapper.map(source, destinationClass);
+        return destinationObj;
+    }
+
 
       public static <T> List<T> mapList(Collection sourceList,Class<T> destinationClass){
          List destinationList = Lists.newArrayList();
