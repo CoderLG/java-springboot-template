@@ -5,7 +5,7 @@ server:
 
 logging:
   level:
-    root: warn
+    root: info
 
 spring:
   jackson:
@@ -14,7 +14,7 @@ spring:
 
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://192.168.4.85:5431/gang
+    url: jdbc:postgresql://127.0.0.1:25432/gang
     username: postgres
     password: postgres
 
